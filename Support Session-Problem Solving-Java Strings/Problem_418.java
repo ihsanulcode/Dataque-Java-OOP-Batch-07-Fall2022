@@ -10,36 +10,44 @@ public class Problem_418 {
 		char a = str.charAt(0);
 		char b = str.charAt(1);
 
+		boolean isValid = true;
+		String text = "";
+		
 		switch (a) {
 		case 'M':
-			System.out.print("Mathematics ");
+			text = "Mathematics ";
 			break;
 		case 'C':
-			System.out.print("Computer Science ");
+			text = "Computer Science ";
 			break;
 		case 'I':
-			System.out.print("Information Technology ");
+			text = "Information Technology ";
 			break;
 		default:
-			System.out.println("Invalid input");
+			isValid = false;
+			//System.out.println("Invalid input");
 		}
 
 		switch (b) {
 		case '1':
-			System.out.print("Freshman");
+			text += "Freshman";
 			break;
 		case '2':
-			System.out.print("Sophomore");
+			text += "Sophomore";
 			break;
 		case '3':
-			System.out.print("Junior");
+			text += "Junior";
 			break;
 		case '4':
-			System.out.print("Senior");
+			text += "Senior";
 			break;
 		default:
-			System.out.println("Invalid input");
+			isValid = false;
+			//System.out.println("Invalid input");
 		}
+		
+		if(!isValid) System.out.println("Invalid input");
+		else System.out.println(text);
 
 	}
 
